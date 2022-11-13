@@ -1,0 +1,430 @@
+.container {
+  margin: 0 auto;
+  color: $mainblack;
+}
+
+.header {
+  padding: 2px 10px;
+  width: 100%;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  background-color: $mainyellow;
+
+
+  .header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    a img {
+      margin-top: 5px;
+      width: 150px;
+    }
+
+    .fa-solid {
+      font-size: 35px;
+      margin-right: 10px;
+    }
+
+
+  }
+  
+}
+
+.nav {
+  display: none;
+  //display: flex;
+  flex-direction: column;
+
+  .nav-list {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+
+    a {
+      position: relative;
+      width: 100%;
+
+      p {
+        text-align: center;
+        font-weight: 700;
+        line-height: 28px;
+        font-size: 18px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 90%;
+        left: 51%;
+        /*從中往外*/
+        right: 51%;
+        z-index: -1;
+        transition: all 0.5s ease;
+      }
+
+      &:hover {
+        &::after {
+          border-bottom: 2px solid $hoverblue;
+          left: 0px;
+          right: 0px;
+        }
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width:576px) {
+  .nav {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+
+@media only screen and (min-width:812px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-title {
+      flex: 10% 1 1;
+
+      .fa-solid {
+        display: none;
+      }
+
+      a img {
+        width: 150px;
+      }
+    }
+  }
+
+  .nav {
+    flex: 90% 1 1;
+    display: flex !important; //確保展開後資料還在
+    flex-direction: row;
+    justify-content: space-around;    
+    ul {
+      padding-top: 15px;      
+      &:first-child {        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 60% 0 1;       
+        }      
+
+      &:last-child {        
+        display: flex;
+        flex: 30% 0 1;
+      }      
+    }
+
+    .nav-list {
+      margin-right: 5px;
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      position: relative;
+     
+      .nav-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        position: relative;
+        padding-right: 0;
+        padding-left: 0;
+        margin: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 90%;
+          left: 0px; //從左開始*/
+          width: 0%;
+          border-bottom: 2px solid $mainblack;
+          z-index: -1;
+          transition: all 1s ease;
+        }
+
+        &:hover {
+          &::after {
+            border-bottom: 2px solid $hoverblue;
+            width: 100%;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+/*次標題*/
+.subtitle{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  background-color:$mainGrey;
+  padding: 8px 0px ;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  span::after{
+   content:'歡迎加入「師虎來了」團隊。';   
+  }
+  button{ 
+   border:0;   
+    a{   
+     padding: 5px 10px;  
+     border-radius: 30px;    
+     background-color: $hoverblue;
+     display: block;
+     width: 100%;     
+     color:#fff;
+     &:hover{
+       background-color: $mainyellow;       
+       color:$hoverblue;    
+    }
+    }   
+}
+}
+ 
+ @media only screen and (min-width:576px) {  
+ .subtitle{
+   span::after{
+        content:'您是五星級專業的師傅或廠商嗎？歡迎加入「師虎來了」團隊。';    
+   } 
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  width: 100%;
+  background-color: $mainblack;
+  padding: 20px 10px;
+
+  .footer-main {
+    margin-bottom: 20px;
+
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 111px;
+      }
+    }
+
+    .footer-store {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+
+      a img {
+        width: 115px;
+        margin: 10px;
+      }
+    }
+
+    .facebook-sm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .fa-brands {
+        color: #fff;
+        font-size: 30px;
+        &:hover{
+          color:$facebokBlue;
+        }
+      }
+    }
+  }
+
+  .footer-serve {
+    display: none;
+  }
+
+  .footer-bottom {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+
+    .bottom-des {
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;     
+      margin-bottom: 5px;
+    }  
+
+    .bottom-list {
+      margin-top: 20px;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      a {
+        color: #fff;
+        &:hover{
+          color:$mainyellow;
+        }
+      }
+    }
+    .facebook-lg {
+      display: none;
+    }
+
+  }
+}
+
+
+
+
+@media only screen and (min-width:768px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 20px;
+
+    .footer-main {
+      flex: 35% 0 1;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      .footer-logo img{
+        width: 155px;
+      }
+      .footer-store {
+        margin-bottom: 0;
+        justify-content: flex-start;
+      }
+      .facebook-sm {
+        display: none;
+      }
+    }
+
+    .footer-serve {
+      flex: 60% 0 1;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        h4 {
+          color: $mainyellow;
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 22px;
+        }
+        li {
+          margin-bottom: 20px;
+          font-size: 18px;
+          a {
+            color: #fff;
+            &:hover {
+              color: $mainyellow;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      font-size: 15px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .bottom-des{
+        flex:40% 1 1;
+      }
+      .bottom-list{
+        flex:40% 0 1;     
+        }
+      .facebook-lg{
+        flex:10% 0 1;
+        display: flex;
+        justify-content: center;  
+        align-items: flex-end;      
+        .fa-brands{
+          color:#fff;
+          font-size: 35px;
+          &:hover{
+            color:$facebokBlue;
+          }
+          
+        }
+      }
+    }
+  }
+
+}
+
+
+/*animation*/
+
+/* Push */
+
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.hvr-push {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-push:hover,
+.hvr-push:focus,
+.hvr-push:active {
+  -webkit-animation-name: hvr-push;
+  animation-name: hvr-push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
