@@ -792,10 +792,9 @@ mt-0 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px;
 }
 .step-section .step-img img {
-  width: 90%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
