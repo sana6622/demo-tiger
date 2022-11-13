@@ -414,6 +414,7 @@ mt-0 {
   content: "歡迎加入「師虎來了」團隊。";
 }
 .subtitle button {
+  background-color: rgb(247, 241, 234);
   border: 0;
 }
 .subtitle button a {
