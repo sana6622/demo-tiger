@@ -435,6 +435,7 @@ mt-0 {
     content: "您是五星級專業的師傅或廠商嗎？歡迎加入「師虎來了」團隊。";
   }
 }
+/*footer*/
 .footer {
   width: 100%;
   background-color: #333333;
@@ -614,7 +615,7 @@ mt-0 {
 }
 
 .swiper {
-  margin-top: 38px;
+  margin-top: 45px;
   width: 100%;
 }
 
@@ -762,6 +763,9 @@ mt-0 {
   justify-content: center;
   align-items: center;
 }
+.step-section .step-des {
+  margin: 0 20px;
+}
 .step-section .step-des p {
   font-size: 45px;
   font-weight: 900;
@@ -788,9 +792,10 @@ mt-0 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 20px;
 }
 .step-section .step-img img {
-  width: 100%;
+  width: 90%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -808,6 +813,7 @@ mt-0 {
     justify-self: space-between;
     align-items: baseline;
     margin-left: 20px;
+    margin: 0 30px;
   }
   .step-section .step-des p {
     font-size: 64px;
@@ -833,5 +839,6 @@ mt-0 {
   }
   .step-section .step-img {
     flex: 40% 1 1;
+    margin: 0 30px;
   }
 }/*# sourceMappingURL=allhome.css.map */
